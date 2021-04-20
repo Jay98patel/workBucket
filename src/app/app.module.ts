@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AngularMaterialModule } from './sharedModule/angular-material.module';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrimeNgModuleModule } from './sharedModule/prime-ng-module.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     AngularMaterialModule,
+    PrimeNgModuleModule,
     AccordionModule.forRoot(),
     BrowserAnimationsModule,
   ],

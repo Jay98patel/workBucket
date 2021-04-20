@@ -6,12 +6,14 @@ import { AdminListComponent } from './components/admin-list/admin-list.component
 import { AdminService } from './services/admin.service';
 import { MasterData } from '../masterData/masterData';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { PrimeNgModuleModule } from '../sharedModule/prime-ng-module.module';
 
 @NgModule({
   declarations: [AdminComponent, AdminListComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
+    PrimeNgModuleModule,
     AccordionModule.forRoot()
   ],
   providers:[AdminService,MasterData]
