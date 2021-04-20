@@ -21,6 +21,7 @@
         "@angular/platform-browser": "~11.1.1",
         "@angular/platform-browser-dynamic": "~11.1.1",
         "@angular/router": "~11.1.1",
+        "@ngx-dummy/accordion-simple": "^0.4.16",
         "handy-collapse": "^1.0.2",
         "ngx-accordion": "0.0.17",
         "ngx-bootstrap": "6.2.0",
