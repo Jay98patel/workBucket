@@ -6,7 +6,6 @@ import { AdminComponent } from './admin.component';
 import { AdminListComponent } from './components/admin-list/admin-list.component';
 import { AdminService } from './services/admin.service';
 import { MasterData } from '../masterData/masterData';
-import { AccordionModule } from 'ngx-accordion';
 
 
 @NgModule({
@@ -14,7 +13,6 @@ import { AccordionModule } from 'ngx-accordion';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    AccordionModule
   ],
   providers:[AdminService,MasterData]
 })

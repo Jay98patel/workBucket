@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import HandyCollapse from "handy-collapse";
 import { KeyValuePair } from 'src/app/masterData/masterData';
 import { AdminService } from '../../services/admin.service';
+import {AccordionModule} from "ngx-accordion";
 
 @Component({
   selector: 'app-admin-list',
@@ -10,7 +10,6 @@ import { AdminService } from '../../services/admin.service';
 })
 export class AdminListComponent implements OnInit {
   adminList:KeyValuePair[];
-  handyCollapse = new HandyCollapse();
 
   constructor(private adminService:AdminService) { }
 
