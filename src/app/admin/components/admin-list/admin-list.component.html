@@ -1,14 +1,8 @@
-<div>
-    <button type="button" data-hc-control="content1">
-  Show/Hide Content
-</button>
-    <div data-hc-content="content1">
-        Toggle Content
-    </div>
-    <button type="button" data-hc-control="content2">
-    Show/Hide Content
-  </button>
-    <div data-hc-content="content2">
-        Toggle Content
+<div class="pt-4">
+    <div *ngFor="let admin of adminList">
+        <button type="button" class="btn">{{admin.id}}</button>
+        <div data-hc-content="{{admin.id}}">
+            {{admin.name}}
+        </div>
     </div>
 </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import HandyCollapse from "handy-collapse";
+import { KeyValuePair } from 'src/app/masterData/masterData';
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'app-admin-list',
@@ -7,15 +9,17 @@ import HandyCollapse from "handy-collapse";
   styleUrls: ['./admin-list.component.scss']
 })
 export class AdminListComponent implements OnInit {
+  adminList:KeyValuePair[];
+  handyCollapse = new HandyCollapse();
 
-  constructor() { }
+  constructor(private adminService:AdminService) { }
 
   ngOnInit(): void {
-    this.initializeHandyCollapse();
+    this.loadAdminList();
   }
 
-  initializeHandyCollapse(){
-    return new HandyCollapse();
+  loadAdminList(){
+   this.adminList= this.adminService.getAdminList();
   }
 
 }
