@@ -1,8 +1,28 @@
-<!-- <div class="pt-4">
-    <div *ngFor="let admin of adminList">
-        <button type="button text-light" class="btn">{{admin.id}}</button>
-        <div data-hc-content="{{admin.id}}">
-            {{admin.name}}
-        </div>
+<div *ngIf="adminList" class="container">
+    <div class="ng-bootstrap-accordion">
+        <h3>Ng Bootstrap Accordion</h3>
+        <accordion [closeOthers]="true" [isAnimated]="true">
+            <accordion-group *ngFor="let admin of adminList" [heading]="admin.name">
+                <div class="pb-2">
+                    <span>Age: </span> {{admin.age}}
+                </div>
+                <accordion [closeOthers]="true" [isAnimated]="true">
+                    <accordion-group heading="Description">
+                        {{admin.description}}
+                        <accordion [closeOthers]="true" [isAnimated]="true">
+                            <accordion-group heading="Occupation">
+                                {{admin.occupation}}
+                                <accordion [closeOthers]="true" [isAnimated]="true">
+                                    <accordion-group heading="Location">
+                                        {{admin.location}}
+                                    </accordion-group>
+                                </accordion>
+                            </accordion-group>
+                        </accordion>
+                    </accordion-group>
+                </accordion>
+            </accordion-group>
+        </accordion>
     </div>
-</div> -->
+
+</div>
