@@ -1,11 +1,11 @@
 
-export interface keyValuePair {
+export interface KeyValuePair {
   id: number;
   name: string
 }
 
-export class masterData {
-  adminsList:keyValuePair[];
+export class MasterData {
+  adminsList:KeyValuePair[];
 
   public AdminList() {
     this.adminsList = [{ id: 1, name: "John" }, { id: 2, name: "James" }, { id: 3, name: "Jay"}];
