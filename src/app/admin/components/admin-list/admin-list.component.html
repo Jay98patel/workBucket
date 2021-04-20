@@ -24,5 +24,26 @@
             </accordion-group>
         </accordion>
     </div>
-
+    <div class="ng-bootstrap-accordion pt-2">
+        <h3>Prime Ng Accordion</h3>
+        <p-accordion>
+            <p-accordionTab *ngFor="let admin of adminList" [header]="admin.name">
+                <p-accordion>
+                    <p-accordionTab [header]="admin.age">
+                        {{admin.description}}
+                        <p-accordion>
+                            <p-accordionTab header="Occupation">
+                                {{admin.occupation}}
+                                <p-accordion>
+                                    <p-accordionTab header="Location">
+                                        {{admin.location}}
+                                    </p-accordionTab>
+                                </p-accordion>
+                            </p-accordionTab>
+                        </p-accordion>
+                    </p-accordionTab>
+                </p-accordion>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
 </div>
